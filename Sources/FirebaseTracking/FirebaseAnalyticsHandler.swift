@@ -2,6 +2,10 @@ import Tracking
 import FirebaseAnalytics
 
 public class FirebaseAnalyticsHandler: AnalyticsHandler {
+    public init() {
+        
+    }
+    
     public func logEvent(_ name: String, parameter: Tracking.Analytics.Metadata?) {
         if name == ScreenEvent.name {
             FirebaseAnalytics.Analytics.logEvent(FirebaseAnalytics.AnalyticsEventScreenView, parameters: parameter.toFirebaseEventMetadata())
