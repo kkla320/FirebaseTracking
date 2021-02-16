@@ -11,7 +11,7 @@ public class FirebaseAnalyticsHandler: AnalyticsHandler {
             FirebaseAnalytics.Analytics.logEvent(FirebaseAnalytics.AnalyticsEventScreenView, parameters: parameter.toFirebaseEventMetadata())
         }
         else {
-            FirebaseAnalytics.Analytics.logEvent(name, parameters: parameter)
+            FirebaseAnalytics.Analytics.logEvent(name, parameters: parameter.toFirebaseEventMetadata())
         }
     }
 }
